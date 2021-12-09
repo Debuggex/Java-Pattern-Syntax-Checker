@@ -10,21 +10,15 @@ public class Main {
         Scanner in = new Scanner(System.in);
         int testCases = Integer.parseInt(in.nextLine());
         while(testCases>0){
-            int count=0;
-
+            
             String pattern = in.nextLine();
             try{
                 Pattern pattern1=Pattern.compile(pattern);
-                count++;
-            }catch (PatternSyntaxException e){
-                count=0;
-            }
-            if (count==1){
                 System.out.println("Valid");
-            }else{
+            }catch (PatternSyntaxException e){
                 System.out.println("Invalid");
             }
-
+            
             testCases=testCases-1;
         }
     }
